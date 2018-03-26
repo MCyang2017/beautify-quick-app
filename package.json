@@ -1,0 +1,62 @@
+{
+    "name": "beautify-quick-app",
+    "displayName": "beautify Quick App",
+    "description": "快应用美化代码插件",
+    "version": "1.0.0",
+    "publisher": "Atom",
+    "icon": "img/logo.png",
+    "engines": {
+        "vscode": "^0.10.5"
+    },
+    "keywords": [
+		"beautify",
+		"quick",
+		"ux",
+        "quickapp",
+        "hap"
+    ],
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/hatedMe/beautify-quick-app"
+	},
+	"bugs": {
+		"url": "https://github.com/hatedMe/beautify-quick-app/issues"
+	},
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:beautifyQuickApp"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "beautifyQuickApp",
+                "title": "ux"
+            }
+        ],
+        "keybindings": [
+			{
+				"command": "beautifyQuickApp",
+				"key": "ctrl+alt+h",
+				"mac": "cmd+alt+b"
+			}
+		]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "js-beautify": "^1.7.5",
+        "pug-beautify": "^0.1.1"
+    }
+}
